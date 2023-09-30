@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/assents/wheel.png">
+    <title>Test Color</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="https://colorhunt.co/" class="link-color">
+        <img src="/assents/link color.PNG" alt="" />
+      </a>
+      <div class="slidecontainer">
+        <input type="range" min="0" max="100" value="100" class="slider" id="myRange">
+        <p><span id="demo"></span>%</p>
+      </div>
+      <div class="container-card" id="container-card">
+        <img src="/assents/wheel.png" alt="" style="height: 50px;width: 50px;position: absolute;left: 20px;top: 20px;">
+        <h1
+          style="
+            background: linear-gradient(
+              to right bottom,
+              #6471f9,
+              #545eca,
+              #444b9c,
+              #363971,
+              #272848
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+          "
+        >
+          Linear Gradient Color
+        </h1>
+        <p style="margin-top: 1rem; font-size: large">
+          โปรแกรมนี้ใช้สำหรับทดสอบสีที่ใช้ในการออกแบบเว็บไซต์
+        </p>
+        <input type="text" id="colorInput" placeholder="# ใส่รหัสสี 3,6 ตัวอักษร" value=""/>
+        <button type="submit" onclick="changeColor()">Submit</button>
+        <div class="container-color">
+          <div class="tooltip">
+          <input type="text" value="" id="myInput1">
+          <input type="text" value="" id="myInput2">
+          <input type="text" value="" id="myInput3">
+          <input type="text" value="" id="myInput4">
+          <input type="text" value="" id="myInput5">
+        </div>
+          <div class="container-boxcolor">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+          </div>
+        </div>
+        <button class="btn1" type="reset" onclick="claercolor()">Claer</button>
+        <button
+          class="btn2"
+          id="scrollButton"
+          type="submit"
+          onclick="Apply()"
+        >
+          Apply
+        </button>
+        <div class="container-btn" id="container-btn">
+          <button class="btn" onclick="changeGradient('to left')"><i class="fa-solid fa-arrow-left"></i></i></button>
+          <button class="btn leftb" onclick="changeGradient('to left bottom')"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="btn leftt" onclick="changeGradient('to left top')"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="btn" onclick="changeGradient('to top')"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="btn" onclick="changeGradient('to bottom')"><i class="fa-solid fa-arrow-down"></i></button>
+          <button class="btn rightt" onclick="changeGradient('to right top')"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="btn rightb active" onclick="changeGradient('to right bottom')"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="btn" onclick="changeGradient('to right')"><i class="fa-solid fa-arrow-right"></i></button>          
+        </div>
+      </div>
+      <div id="displaycode"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
